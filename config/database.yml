@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: quaestio
+  password: Dfr368qE
+  host: localhost
+
+development:
+  <<: *default
+  database: quaestio_development
+
+test:
+  <<: *default
+  database: quaestio_test
+
+production:
+  <<: *default
+  database: quaestio_production
+  username: quaestio
+  password: <%= ENV["QUAESTIO_DATABASE_PASSWORD"] %>
