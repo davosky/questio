@@ -34,4 +34,7 @@ class JanCur < ApplicationRecord
   # Cessazioni
   scope :decesso, -> { where("motivo_cessazione_iscrizione LIKE 'Decesso'") }
   scope :revoca, -> { where("motivo_cessazione_iscrizione LIKE 'Revoca'") }
+
+  # Provvisorie
+  scope :provvisoria, -> { where("provvisoria LIKE 'SI'") }
 end

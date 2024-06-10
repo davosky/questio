@@ -1,0 +1,170 @@
+<div class="row m-3 p-3">
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-city"></i>
+          &nbsp;
+          GORIZIA
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_prevs_go.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_curs_go.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_go_trend %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-city"></i>
+          &nbsp;
+          PORDENONE
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_prevs_pn.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_curs_pn.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_pn_trend %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-city"></i>
+          &nbsp;
+          TRIESTE
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_prevs_ts.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_curs_ts.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_ts_trend %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-city"></i>
+          &nbsp;
+          UDINE
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_prevs_ud.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@jan_curs_ud.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_ud_trend %>
+      </div>
+    </div>
+  </div>
+</div>
