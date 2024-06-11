@@ -193,4 +193,114 @@ module JanuariesHelper
       "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
     end
   end
+
+  def delega_trend
+    current = JanCur.delega.count
+    previous = JanPrev.delega.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def brevimanu_trend
+    current = JanCur.brevimanu.count
+    previous = JanPrev.brevimanu.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def ordinaria_trend
+    current = JanCur.ordinaria.count
+    previous = JanPrev.ordinaria.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def ordinariace_trend
+    current = JanCur.ordinariace.count
+    previous = JanPrev.ordinariace.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def naspi_trend
+    current = JanCur.naspi.count
+    previous = JanPrev.naspi.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def dsagricola_trend
+    current = JanCur.dsagricola.count
+    previous = JanPrev.dsagricola.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def delegatesoro_trend
+    current = JanCur.delegatesoro.count
+    previous = JanPrev.delegatesoro.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def concomitante_trend
+    current = JanCur.concomitante.count
+    previous = JanPrev.concomitante.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def decesso_trend
+    current = JanCur.decesso.count
+    previous = JanPrev.decesso.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
+
+  def revoca_trend
+    current = JanCur.revoca.count
+    previous = JanPrev.revoca.count
+    trend = current - previous
+    if current > previous
+      "<span class='text-success fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+    else
+      "<span class='text-danger fw-bold'>#{trend}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+    end
+  end
 end
