@@ -33,6 +33,8 @@ class JanuariesController < ApplicationController
     # Cessazioni
     @jan_prevs_decesso = JanPrev.decesso
     @jan_prevs_revoca = JanPrev.revoca
+    # Provvisorie
+    @jan_prevs_provvisoria = JanPrev.provvisoria
 
     # Anno Corrente
     @jan_curs = JanCur.all
@@ -67,5 +69,7 @@ class JanuariesController < ApplicationController
     # Cessazioni
     @jan_curs_decesso = JanCur.decesso
     @jan_curs_revoca = JanCur.revoca
+    # Provvisorie
+    @jan_curs_provvisoria = JanCur.provvisoria
   end
 end
