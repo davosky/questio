@@ -4,6 +4,7 @@ ruby "3.1.2"
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
+gem "chartkick", "~> 5.0"
 gem "cssbundling-rails"
 gem "image_processing", "~> 1.2"
 gem "jbuilder"
@@ -24,8 +25,6 @@ end
 group :development do
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
   gem "web-console"
-
-
 end
 
 group :test do

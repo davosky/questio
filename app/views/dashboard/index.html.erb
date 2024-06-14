@@ -1,0 +1,47 @@
+<div class="row m-3 p-3">
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        Gennaio 2023
+      </div>
+      <div class="card-body">
+        <%= column_chart @jan_prevs.group(:codice_azzonamento_comprensoriale).count, colors: ["#29abe0", "#20c997", "#93c54b", "#f47c3c"] %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        Gennaio 2024
+      </div>
+      <div class="card-body">
+        <%= column_chart @jan_curs.group(:codice_azzonamento_comprensoriale).count %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        Febbraio 2023
+      </div>
+      <div class="card-body">
+        <%= column_chart @feb_prevs.group(:codice_azzonamento_comprensoriale).count %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        Febbraio 2023
+      </div>
+      <div class="card-body">
+        <%= column_chart @feb_curs.group(:codice_azzonamento_comprensoriale).count %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row m-3 p-3">
+  <div class="col-12 rounded shadow">
+    <%= pie_chart @feb_prevs.group(:categoria).count %>
+  </div>
+</div>
