@@ -1,0 +1,142 @@
+<div class="row p-3 m-3">
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-solid fa-id-card"></i>
+        &nbsp;
+        <span class="fw-bold">
+          DELEGHE
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale Deleghe:
+        &nbsp;
+        <span class="fw-bold">
+          <%= "#{@may_prevs_delega.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale Deleghe:
+        &nbsp;
+        <span class="fw-bold">
+          <%= "#{@may_curs_delega.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= delega_trend_may %>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-solid fa-money-bill-1-wave"></i>
+        &nbsp;
+        <span class="fw-bold">
+          BREVIMANU
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale BreviManu:
+        &nbsp;
+        <span class="fw-bold">
+          <%= "#{@may_prevs_brevimanu.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale BreviManu:
+        &nbsp;
+        <span class="fw-bold">
+          <%= "#{@may_curs_brevimanu.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= brevimanu_trend_may %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-1 mb-3 ms-3 me-3 p-3">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">
+        <span class="fw-bold text-warning">
+          <i class="fa-solid fa-file-signature"></i>
+          &nbsp;
+          Iscrizioni Provvisorie
+          &nbsp;
+          <small>
+            <i class="text-secondary">
+              (in attesa di primo versamento)
+            </i>
+          </small>
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          <%= "#{@may_prevs_provvisoria.count}".html_safe %>
+        </span>
+        &nbsp;
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          <%= "#{@may_curs_provvisoria.count}".html_safe %>
+        </span>
+        &nbsp;
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= provvisoria_trend_may %>
+      </div>
+    </div>
+  </div>
+</div>

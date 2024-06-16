@@ -1,47 +1,106 @@
-<div class="row m-3 p-3">
-  <div class="col-3">
-    <div class="card shadow">
-      <div class="card-header">
-        Gennaio 2023
-      </div>
-      <div class="card-body">
-        <%= column_chart @jan_prevs.group(:codice_azzonamento_comprensoriale).count, colors: ["#29abe0", "#20c997", "#93c54b", "#f47c3c"] %>
-      </div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card shadow">
-      <div class="card-header">
-        Gennaio 2024
-      </div>
-      <div class="card-body">
-        <%= column_chart @jan_curs.group(:codice_azzonamento_comprensoriale).count %>
-      </div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card shadow">
-      <div class="card-header">
-        Febbraio 2023
-      </div>
-      <div class="card-body">
-        <%= column_chart @feb_prevs.group(:codice_azzonamento_comprensoriale).count %>
-      </div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card shadow">
-      <div class="card-header">
-        Febbraio 2023
-      </div>
-      <div class="card-body">
-        <%= column_chart @feb_curs.group(:codice_azzonamento_comprensoriale).count %>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-12">
+    <h4>
+      <i class="fw-bold">
+        Andamento 
+      </i>
+    </h4>
   </div>
 </div>
-<div class="row m-3 p-3">
-  <div class="col-12 rounded shadow">
-    <%= pie_chart @feb_prevs.group(:categoria).count %>
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= subscription_trend_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= subscription_trend_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= subscription_trend_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= subscription_trend_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= subscription_trend_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%# subscription_trend_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%# subscription_trend_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          AGO
+          <br/>
+          <%# subscription_trend_aug %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%# subscription_trend_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%# subscription_trend_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%# subscription_trend_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%# subscription_trend_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
 </div>
+<div class="row mt-3">
+  <div class="col-12">
+    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}"}, height: "120px",colors: ["#29abe0"]) %>
+  </div>
+</div>
+<br/>
+<hr/>

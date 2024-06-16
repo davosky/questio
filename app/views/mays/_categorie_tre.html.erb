@@ -1,0 +1,170 @@
+<div class="row p-3 m-3">
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          FP
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_prevs_fp.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_curs_fp.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_fp_trend_may %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          NIDIL
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_prevs_nidil.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_curs_nidil.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_nidil_trend_may %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          SLC
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_prevs_slc.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_curs_slc.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_slc_trend_may %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          SPI
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_prevs_spi.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@may_curs_spi.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_spi_trend_may %>
+      </div>
+    </div>
+  </div>
+</div>

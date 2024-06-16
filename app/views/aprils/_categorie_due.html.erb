@@ -1,0 +1,170 @@
+<div class="row p-3 m-3">
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          FIOM
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_prevs_fiom.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_curs_fiom.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_fiom_trend_apr %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          FISAC
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_prevs_fisac.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_curs_fisac.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_fisac_trend_apr %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          FLAI
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_prevs_flai.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_curs_flai.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_flai_trend_apr %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card shadow">
+      <div class="card-header">
+        <small class="fw-bold">
+          <i class="fa-solid fa-square"></i>
+          &nbsp;
+          FLC
+          &emsp;
+          <i class="fa-regular fa-calendar"></i>
+          &nbsp;
+          <%= previous_year %> - <%= current_year %>
+        </small>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= previous_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_prevs_flc.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno <%= current_year %>:
+        &nbsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@apr_curs_flc.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &nbsp;
+        <%= subscribers_flc_trend_apr %>
+      </div>
+    </div>
+  </div>
+</div>
