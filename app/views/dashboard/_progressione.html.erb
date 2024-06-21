@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-12">
+    <span class="fw-bold">
+      Progressione riferita all'anno corrente
+      <br/>
+      <small class="text-secondary">
+        <i>
+          (il dato di gennaio viene riferito alla differenza tr&agrave; la chiusura dell'anno precedente e l'apertura dell'anno corrente)
+        </i>
+        <br/>
+        <i>
+          (la progressione mensile viene riferita al dato di apertura di gennaio dell'anno in corso)
+        </i>
+      </small>
+    </span>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%# subscription_trend_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%# subscription_trend_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          AGO
+          <br/>
+          <%# subscription_trend_aug %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%# subscription_trend_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%# subscription_trend_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%# subscription_trend_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%# subscription_trend_dic %>
+        </small>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+    <%= line_chart({"Gennaio" => "#{jan_progression}", "Febbraio" => "#{feb_progression}", "Marzo" => "#{mar_progression}", "Aprile" => "#{apr_progression}", "Maggio" => "#{may_progression}"}, height: "120px",colors: ["#29abe0"]) %>
+  </div>
+</div>

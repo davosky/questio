@@ -1,4 +1,7 @@
 module DashboardHelper
+
+  # TREND
+
   def jan_trend
     if JanCur.pluck(:id).count > 0
       jan_prev = JanPrev.pluck(:id).count
@@ -96,6 +99,108 @@ module DashboardHelper
       may_prev = MayPrev.pluck(:id).count
       may_cur = MayCur.pluck(:id).count
       result = may_cur - may_prev
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+      end
+    end
+  end
+
+  # PROGRESSION
+
+  def jan_progression
+    if JanCur.pluck(:id).count > 0
+      jan_cur = JanCur.pluck(:id).count
+      result = jan_cur
+    end
+  end
+
+  def feb_progression
+    if FebCur.pluck(:id).count > 0
+      feb_cur = FebCur.pluck(:id).count
+      result = feb_cur
+    end
+  end
+
+  def mar_progression
+    if MarCur.pluck(:id).count > 0
+      mar_cur = MarCur.pluck(:id).count
+      result = mar_cur
+    end
+  end
+
+  def apr_progression
+    if AprCur.pluck(:id).count > 0
+      apr_cur = AprCur.pluck(:id).count
+      result = apr_cur
+    end
+  end
+
+  def may_progression
+    if MayCur.pluck(:id).count > 0
+      may_cur = MayCur.pluck(:id).count
+      result = may_cur
+    end
+  end
+
+  def progression_jan
+    if JanCur.pluck(:id).count > 0
+      jan_cur = JanCur.pluck(:id).count
+      jan_prev = JanPrev.pluck(:id).count
+      result = jan_cur - jan_prev
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+      end
+    end
+  end
+
+  def progression_feb
+    if FebCur.pluck(:id).count > 0
+      feb_cur = FebCur.pluck(:id).count
+      jan_cur = JanCur.pluck(:id).count
+      result = feb_cur - jan_cur
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+      end
+    end
+  end
+
+  def progression_mar
+    if MarCur.pluck(:id).count > 0
+      mar_cur = MarCur.pluck(:id).count
+      jan_cur = JanCur.pluck(:id).count
+      result = mar_cur - jan_cur
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+      end
+    end
+  end
+
+  def progression_apr
+    if AprCur.pluck(:id).count > 0
+      apr_cur = AprCur.pluck(:id).count
+      jan_cur = JanCur.pluck(:id).count
+      result = apr_cur - jan_cur
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-down'></i></span>".html_safe
+      end
+    end
+  end
+
+  def progression_may
+    if MayCur.pluck(:id).count > 0
+      may_cur = MayCur.pluck(:id).count
+      jan_cur = JanCur.pluck(:id).count
+      result = may_cur - jan_cur
       if result > 0
         "<span class='text-success fw-bold'>#{result}&nbsp;<i class='fa-solid fa-circle-arrow-up'></i></span>".html_safe
       else
