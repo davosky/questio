@@ -1,40 +1,130 @@
 <div class="row">
   <div class="col-12">
-    <p class="fw-bold mb-3">
+    <span class="fw-bold">
+      <i class="fa-solid fa-city"></i>
+      &nbsp;
       Situazione Dei Territori
-    </p>
+    </span>
+    <br/>
   </div>
 </div>
 <div class="row">
-  <div class="col-3">
-    <div class="card border-info">
-      <div class="card-header">
-        <strong>
-          Gorizia
-        </strong>
-      </div>
-      <div class="card-body">
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item">
-            <h6>G</h6>
-          </li>
-        </ul>
+  <div class="card">
+    <div class="card-header">
+      <strong>
+        Gorizia
+      </strong>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrows-left-right-to-line"></i>
+            &nbsp;
+            Comparazione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_trend_go}", "Febbraio" => "#{feb_trend_go}", "Marzo" => "#{mar_trend_go}", "Aprile" => "#{apr_trend_go}", "Maggio" => "#{may_trend_go}", "Giugno" => "#{jun_trend_go}"}, height: "120px",colors: ["#29abe0"]) %>
+          <br/>
+        </div>
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            &nbsp;
+            Progressione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_progression_go}", "Febbraio" => "#{feb_progression_go}", "Marzo" => "#{mar_progression_go}", "Aprile" => "#{apr_progression_go}", "Maggio" => "#{may_progression_go}", "Giugno" => "#{jun_progression_go}"}, height: "120px",colors: ["#29abe0"]) %>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-3">
-    <strong>
-      Pordenone
-    </strong>
+</div>
+<div class="row">
+  <div class="card">
+    <div class="card-header">
+      <strong>
+        Pordenone
+      </strong>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrows-left-right-to-line"></i>
+            &nbsp;
+            Comparazione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_trend_pn}", "Febbraio" => "#{feb_trend_pn}", "Marzo" => "#{mar_trend_pn}", "Aprile" => "#{apr_trend_pn}", "Maggio" => "#{may_trend_pn}", "Giugno" => "#{jun_trend_pn}"}, height: "120px",colors: ["#29abe0"]) %>
+          <br/>
+        </div>
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            &nbsp;
+            Progressione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_progression_pn}", "Febbraio" => "#{feb_progression_pn}", "Marzo" => "#{mar_progression_pn}", "Aprile" => "#{apr_progression_pn}", "Maggio" => "#{may_progression_pn}", "Giugno" => "#{jun_progression_pn}"}, height: "120px",colors: ["#29abe0"]) %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-3">
-    <strong>
-      Trieste
-    </strong>
+</div>
+<div class="row">
+  <div class="card">
+    <div class="card-header">
+      <strong>
+        Trieste
+      </strong>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrows-left-right-to-line"></i>
+            &nbsp;
+            Comparazione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_trend_ts}", "Febbraio" => "#{feb_trend_ts}", "Marzo" => "#{mar_trend_ts}", "Aprile" => "#{apr_trend_ts}", "Maggio" => "#{may_trend_ts}", "Giugno" => "#{jun_trend_pn}"}, height: "120px",colors: ["#29abe0"]) %>
+          <br/>
+        </div>
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            &nbsp;
+            Progressione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_progression_ts}", "Febbraio" => "#{feb_progression_ts}", "Marzo" => "#{mar_progression_ts}", "Aprile" => "#{apr_progression_ts}", "Maggio" => "#{may_progression_ts}", "Giugno" => "#{jun_progression_ts}"}, height: "120px",colors: ["#29abe0"]) %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-3">
-    <strong>
-      Udine
-    </strong>
+</div>
+<div class="row">
+  <div class="card">
+    <div class="card-header">
+      <strong>
+        Udine
+      </strong>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrows-left-right-to-line"></i>
+            &nbsp;
+            Comparazione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_trend_ud}", "Febbraio" => "#{feb_trend_ud}", "Marzo" => "#{mar_trend_ud}", "Aprile" => "#{apr_trend_ud}", "Maggio" => "#{may_trend_ud}", "Giugno" => "#{jun_trend_ud}"}, height: "120px",colors: ["#29abe0"]) %>
+          <br/>
+        </div>
+        <div class="col-6">
+          <p class="text-center">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            &nbsp;
+            Progressione
+          </p>
+          <%= line_chart({"Gennaio" => "#{jan_progression_ud}", "Febbraio" => "#{feb_progression_ud}", "Marzo" => "#{mar_progression_ud}", "Aprile" => "#{apr_progression_ud}", "Maggio" => "#{may_progression_ud}", "Giugno" => "#{jun_progression_ud}"}, height: "120px",colors: ["#29abe0"]) %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

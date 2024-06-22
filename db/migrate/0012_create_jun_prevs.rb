@@ -1,6 +1,6 @@
-class CreateJanPrevs < ActiveRecord::Migration[7.1]
+class CreateJunPrevs < ActiveRecord::Migration[7.1]
   def change
-    create_table :jan_prevs do |t|
+    create_table :jun_prevs do |t|
       t.string :categoria
       t.string :cognome
       t.string :cognome_acquisito

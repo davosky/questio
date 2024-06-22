@@ -1,0 +1,86 @@
+<div class="row p-3 m-3">
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-solid fa-skull-crossbones"></i>
+        &nbsp;
+        <span class="fw-bold">
+          DECESSI
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &emsp;
+        <%= previous_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &emsp;
+        <span class="fw-bold">
+          <%= "#{@jun_prevs_decesso.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &emsp;
+        <%= current_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &emsp;
+        <span class="fw-bold">
+          <%= "#{@jun_curs_decesso.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= decesso_trend_jun %>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-solid fa-file-circle-xmark"></i>
+        &nbsp;
+        <span class="fw-bold">
+          REVOCHE
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &emsp;
+        <%= previous_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &emsp;
+        <span class="fw-bold">
+          <%= "#{@jun_prevs_revoca.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &emsp;
+        <%= current_year %>
+        &emsp;
+        <i class="fa-solid fa-users"></i>
+        &emsp;
+        <span class="fw-bold">
+          <%= "#{@jun_curs_revoca.count}".html_safe %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= revoca_trend_jun %>
+      </div>
+    </div>
+  </div>
+</div>

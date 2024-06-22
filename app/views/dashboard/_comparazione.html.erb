@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-12">
     <span class="fw-bold">
+      <i class="fa-solid fa-arrows-left-right-to-line"></i>
+      &nbsp;
       Comparazione con l'anno precedente
     </span>
     <ul class="list-group list-group-horizontal">
@@ -43,7 +45,7 @@
         <small>
           GIU
           <br/>
-          <%# subscription_trend_jun %>
+          <%= subscription_trend_jun %>
         </small>
       </li>
       <li class="list-group-item">
@@ -93,6 +95,6 @@
 </div>
 <div class="row mt-3">
   <div class="col-12">
-    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}"}, height: "120px",colors: ["#29abe0"]) %>
+    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}", "Giugno" => "#{jun_trend}"}, height: "120px",colors: ["#29abe0"]) %>
   </div>
 </div>
