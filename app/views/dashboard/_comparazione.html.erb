@@ -52,42 +52,42 @@
         <small>
           LUG
           <br/>
-          <%# subscription_trend_jul %>
+          <%= subscription_trend_jul %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           AGO
           <br/>
-          <%# subscription_trend_aug %>
+          <%= subscription_trend_aug %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           SET
           <br/>
-          <%# subscription_trend_sep %>
+          <%= subscription_trend_sep %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           OTT
           <br/>
-          <%# subscription_trend_oct %>
+          <%= subscription_trend_oct %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           NOV
           <br/>
-          <%# subscription_trend_nov %>
+          <%= subscription_trend_nov %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           DIC
           <br/>
-          <%# subscription_trend_dic %>
+          <%= subscription_trend_dic %>
         </small>
       </li>
     </ul>
@@ -95,6 +95,6 @@
 </div>
 <div class="row mt-3">
   <div class="col-12">
-    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}", "Giugno" => "#{jun_trend}"}, height: "120px",colors: ["#29abe0"]) %>
+    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}", "Giugno" => "#{jun_trend}", "Luglio" => "#{jul_trend}", "Agosto" => "#{aug_trend}", "Settembre" => "#{sep_trend}", "Ottobre" => "#{oct_trend}", "Novembre" => "#{nov_trend}", "Dicembre" => "#{dic_trend}"}, height: "120px",colors: ["#29abe0"]) %>
   </div>
 </div>

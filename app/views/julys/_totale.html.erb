@@ -1,0 +1,42 @@
+<div class="row m-3 p-3">
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:&emsp;
+        <span class="fw-bold">
+          <%= previous_year %>
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale Iscritti:
+        &nbsp;
+        <span class="fw-bold">
+          <%= "#{@jul_prevs = JulPrev.all.count}".html_safe %>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col 6">
+    <div class="card shadow">
+      <div class="card-header">
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:&emsp;
+        <span class="fw-bold">
+          <%= current_year %>
+        </span>
+      </div>
+      <div class="card-body">
+        <i class="fa-solid fa-users"></i>
+        &nbsp;
+        Totale Iscritti:
+        &nbsp;
+        <%= subscribers_fvg_trend_jul %>
+      </div>
+    </div>
+  </div>
+</div>

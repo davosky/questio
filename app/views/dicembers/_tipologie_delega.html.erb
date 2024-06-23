@@ -1,0 +1,236 @@
+<div class="row p-3 m-3">
+  <div class="col-4">
+    <ul class="list-group shadow">
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          ORDINARIA
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_ordinaria.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_ordinaria.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= ordinaria_trend_dic %>
+      </li>
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          ORDINARIA CASSA EDILE
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_ordinariace.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_ordinariace.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= ordinariace_trend_dic %>
+      </li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <ul class="list-group shadow">
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          NASPI
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_naspi.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_naspi.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= naspi_trend_dic %>
+      </li>
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          DS AGRICOLA
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_dsagricola.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_dsagricola.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= dsagricola_trend_dic %>
+      </li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <ul class="list-group shadow">
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          DELEGA TESORO
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_delegatesoro.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_delegatesoro.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= delegatesoro_trend_dic %>
+      </li>
+      <li class="list-group-item justify-content-between align-items-center">
+        <span class="fw-bold">
+          <i class="fa-solid fa-id-card"></i>
+          &nbsp;
+          CONCOMITANTE
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= previous_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_prevs_concomitante.count}" %>
+        </span>
+        <br/>
+        <i class="fa-regular fa-calendar"></i>
+        &nbsp;
+        Anno:
+        &nbsp;
+        <%= current_year %>
+        &emsp;
+        <span class="fw-bold">
+          <i class="fa-solid fa-users"></i>
+          &nbsp;
+          <%= "#{@dic_curs_concomitante.count}" %>
+        </span>
+        <br/>
+        <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        &nbsp;
+        Tendenza:
+        &emsp;
+        <%= concomitante_trend_dic %>
+      </li>
+    </ul>
+  </div>
+</div>

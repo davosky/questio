@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   get "aprils/index"
   get "mays/index"
   get "junes/index"
+  get "julys/index"
+  get "augusts/index"
+  get "septembers/index"
+  get "octobers/index"
+  get "novembers/index"
+  get "dicembers/index"
 
   get "up" => "rails/health#show", as: :rails_health_check
 end
