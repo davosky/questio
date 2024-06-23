@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "home/index"
   get "home/credits"
   get "dashboard/index"
+  get "categories/index"
 
   get "januaries/index"
   get "februaries/index"

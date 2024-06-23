@@ -1,0 +1,2 @@
+class FilcamsController < ApplicationController
+end
