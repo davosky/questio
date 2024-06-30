@@ -1,100 +1,91 @@
 <div class="row">
-  <div class="col-12">
-    <span class="fw-bold">
-      <i class="fa-solid fa-arrows-left-right-to-line"></i>
-      &nbsp;
-      Comparazione con l'anno precedente
-    </span>
+  <div class="col-8">
+    <p class="fw-bold">
+      <%= image_tag("categories/spi.svg", size: "32x32", class: "img-fluid") %>
+      &emsp;
+      SPI
+    </p>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
           GEN
           <br/>
-          <%= subscription_trend_jan %>
+          <%= spi_trend_jan %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           FEB
           <br/>
-          <%= subscription_trend_feb %>
+          <%= spi_trend_feb %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           MAR
           <br/>
-          <%= subscription_trend_mar %>
+          <%= spi_trend_mar %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           APR
           <br/>
-          <%= subscription_trend_apr %>
+          <%= spi_trend_apr %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           MAG
           <br/>
-          <%= subscription_trend_may %>
+          <%= spi_trend_may %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           GIU
           <br/>
-          <%= subscription_trend_jun %>
+          <%= spi_trend_jun %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           LUG
           <br/>
-          <%= subscription_trend_jul %>
-        </small>
-      </li>
-      <li class="list-group-item">
-        <small>
-          AGO
-          <br/>
-          <%= subscription_trend_aug %>
+          <%= spi_trend_jul %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           SET
           <br/>
-          <%= subscription_trend_sep %>
+          <%= spi_trend_sep %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           OTT
           <br/>
-          <%= subscription_trend_oct %>
+          <%= spi_trend_oct %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           NOV
           <br/>
-          <%= subscription_trend_nov %>
+          <%= spi_trend_nov %>
         </small>
       </li>
       <li class="list-group-item">
         <small>
           DIC
           <br/>
-          <%= subscription_trend_dic %>
+          <%= spi_trend_dic %>
         </small>
       </li>
     </ul>
   </div>
-</div>
-<div class="row mt-3">
-  <div class="col-12">
-    <%= line_chart({"Gennaio" => "#{jan_trend}", "Febbraio" => "#{feb_trend}", "Marzo" => "#{mar_trend}", "Aprile" => "#{apr_trend}", "Maggio" => "#{may_trend}", "Giugno" => "#{jun_trend}", "Luglio" => "#{jul_trend}", "Agosto" => "#{aug_trend}", "Settembre" => "#{sep_trend}", "Ottobre" => "#{oct_trend}", "Novembre" => "#{nov_trend}", "Dicembre" => "#{dic_trend}"}, height: "120px",colors: ["#{trend_resulting_color}"]) %>
+  <div class="col-4">
+    <%= line_chart({"gen" => "#{jan_trend_spi}", "feb" => "#{feb_trend_spi}", "mar" => "#{mar_trend_spi}", "apr" => "#{apr_trend_spi}", "mag" => "#{may_trend_spi}", "giu" => "#{jun_trend_spi}", "lug" => "#{jul_trend_spi}", "ago" => "#{aug_trend_spi}", "set" => "#{sep_trend_spi}", "ott" => "#{oct_trend_spi}", "nov" => "#{nov_trend_spi}", "dic" => "#{dic_trend_spi}"}, height: "120px",colors: ["#e83e8c"]) %>
   </div>
 </div>
