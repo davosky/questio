@@ -5,6 +5,11 @@
       &emsp;
       FILLEA
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= fillea_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= fillea_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= fillea_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= fillea_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= fillea_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= fillea_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= fillea_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= fillea_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= fillea_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= fillea_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= fillea_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_fillea}", "feb" => "#{feb_trend_fillea}", "mar" => "#{mar_trend_fillea}", "apr" => "#{apr_trend_fillea}", "mag" => "#{may_trend_fillea}", "giu" => "#{jun_trend_fillea}", "lug" => "#{jul_trend_fillea}", "ago" => "#{aug_trend_fillea}", "set" => "#{sep_trend_fillea}", "ott" => "#{oct_trend_fillea}", "nov" => "#{nov_trend_fillea}", "dic" => "#{dic_trend_fillea}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_fillea}", "feb" => "#{feb_trend_fillea}", "mar" => "#{mar_trend_fillea}", "apr" => "#{apr_trend_fillea}", "mag" => "#{may_trend_fillea}", "giu" => "#{jun_trend_fillea}", "lug" => "#{jul_trend_fillea}", "ago" => "#{aug_trend_fillea}", "set" => "#{sep_trend_fillea}", "ott" => "#{oct_trend_fillea}", "nov" => "#{nov_trend_fillea}", "dic" => "#{dic_trend_fillea}"}, height: "120px",colors: ["#{fillea_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_fillea}", "feb" => "#{feb_progression_fillea}", "mar" => "#{mar_progression_fillea}", "apr" => "#{apr_progression_fillea}", "mag" => "#{may_progression_fillea}", "giu" => "#{jun_progression_fillea}", "lug" => "#{jul_progression_fillea}", "ago" => "#{aug_progression_fillea}", "set" => "#{sep_progression_fillea}", "ott" => "#{oct_progression_fillea}", "nov" => "#{nov_progression_fillea}", "dic" => "#{dic_progression_fillea}"}, height: "120px",colors: ["#{fillea_progression_resulting_color}"]) %>
   </div>
 </div>

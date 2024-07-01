@@ -5,6 +5,11 @@
       &emsp;
       FLAI
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= flai_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= flai_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= flai_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= flai_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= flai_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= flai_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= flai_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= flai_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= flai_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= flai_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= flai_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_flai}", "feb" => "#{feb_trend_flai}", "mar" => "#{mar_trend_flai}", "apr" => "#{apr_trend_flai}", "mag" => "#{may_trend_flai}", "giu" => "#{jun_trend_flai}", "lug" => "#{jul_trend_flai}", "ago" => "#{aug_trend_flai}", "set" => "#{sep_trend_flai}", "ott" => "#{oct_trend_flai}", "nov" => "#{nov_trend_flai}", "dic" => "#{dic_trend_flai}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_flai}", "feb" => "#{feb_trend_flai}", "mar" => "#{mar_trend_flai}", "apr" => "#{apr_trend_flai}", "mag" => "#{may_trend_flai}", "giu" => "#{jun_trend_flai}", "lug" => "#{jul_trend_flai}", "ago" => "#{aug_trend_flai}", "set" => "#{sep_trend_flai}", "ott" => "#{oct_trend_flai}", "nov" => "#{nov_trend_flai}", "dic" => "#{dic_trend_flai}"}, height: "120px",colors: ["#{flai_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_flai}", "feb" => "#{feb_progression_flai}", "mar" => "#{mar_progression_flai}", "apr" => "#{apr_progression_flai}", "mag" => "#{may_progression_flai}", "giu" => "#{jun_progression_flai}", "lug" => "#{jul_progression_flai}", "ago" => "#{aug_progression_flai}", "set" => "#{sep_progression_flai}", "ott" => "#{oct_progression_flai}", "nov" => "#{nov_progression_flai}", "dic" => "#{dic_progression_flai}"}, height: "120px",colors: ["#{flai_progression_resulting_color}"]) %>
   </div>
 </div>

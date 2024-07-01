@@ -5,6 +5,11 @@
       &emsp;
       NIDIL
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= nidil_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= nidil_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= nidil_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= nidil_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= nidil_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= nidil_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= nidil_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= nidil_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= nidil_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= nidil_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= nidil_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_nidil}", "feb" => "#{feb_trend_nidil}", "mar" => "#{mar_trend_nidil}", "apr" => "#{apr_trend_nidil}", "mag" => "#{may_trend_nidil}", "giu" => "#{jun_trend_nidil}", "lug" => "#{jul_trend_nidil}", "ago" => "#{aug_trend_nidil}", "set" => "#{sep_trend_nidil}", "ott" => "#{oct_trend_nidil}", "nov" => "#{nov_trend_nidil}", "dic" => "#{dic_trend_nidil}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_nidil}", "feb" => "#{feb_trend_nidil}", "mar" => "#{mar_trend_nidil}", "apr" => "#{apr_trend_nidil}", "mag" => "#{may_trend_nidil}", "giu" => "#{jun_trend_nidil}", "lug" => "#{jul_trend_nidil}", "ago" => "#{aug_trend_nidil}", "set" => "#{sep_trend_nidil}", "ott" => "#{oct_trend_nidil}", "nov" => "#{nov_trend_nidil}", "dic" => "#{dic_trend_nidil}"}, height: "120px",colors: ["#{nidil_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_nidil}", "feb" => "#{feb_progression_nidil}", "mar" => "#{mar_progression_nidil}", "apr" => "#{apr_progression_nidil}", "mag" => "#{may_progression_nidil}", "giu" => "#{jun_progression_nidil}", "lug" => "#{jul_progression_nidil}", "ago" => "#{aug_progression_nidil}", "set" => "#{sep_progression_nidil}", "ott" => "#{oct_progression_nidil}", "nov" => "#{nov_progression_nidil}", "dic" => "#{dic_progression_nidil}"}, height: "120px",colors: ["#{nidil_progression_resulting_color}"]) %>
   </div>
 </div>

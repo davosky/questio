@@ -5,6 +5,11 @@
       &emsp;
       FILCAMS
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= filcams_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= filcams_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= filcams_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= filcams_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= filcams_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= filcams_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= filcams_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= filcams_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= filcams_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= filcams_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= filcams_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_filcams}", "feb" => "#{feb_trend_filcams}", "mar" => "#{mar_trend_filcams}", "apr" => "#{apr_trend_filcams}", "mag" => "#{may_trend_filcams}", "giu" => "#{jun_trend_filcams}", "lug" => "#{jul_trend_filcams}", "ago" => "#{aug_trend_filcams}", "set" => "#{sep_trend_filcams}", "ott" => "#{oct_trend_filcams}", "nov" => "#{nov_trend_filcams}", "dic" => "#{dic_trend_filcams}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_filcams}", "feb" => "#{feb_trend_filcams}", "mar" => "#{mar_trend_filcams}", "apr" => "#{apr_trend_filcams}", "mag" => "#{may_trend_filcams}", "giu" => "#{jun_trend_filcams}", "lug" => "#{jul_trend_filcams}", "ago" => "#{aug_trend_filcams}", "set" => "#{sep_trend_filcams}", "ott" => "#{oct_trend_filcams}", "nov" => "#{nov_trend_filcams}", "dic" => "#{dic_trend_filcams}"}, height: "120px",colors: ["#{filcams_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_filcams}", "feb" => "#{feb_progression_filcams}", "mar" => "#{mar_progression_filcams}", "apr" => "#{apr_progression_filcams}", "mag" => "#{may_progression_filcams}", "giu" => "#{jun_progression_filcams}", "lug" => "#{jul_progression_filcams}", "ago" => "#{aug_progression_filcams}", "set" => "#{sep_progression_filcams}", "ott" => "#{oct_progression_filcams}", "nov" => "#{nov_progression_filcams}", "dic" => "#{dic_progression_filcams}"}, height: "120px",colors: ["#{filcams_progression_resulting_color}"]) %>
   </div>
 </div>

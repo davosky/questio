@@ -5,6 +5,11 @@
       &emsp;
       FP
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= fp_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= fp_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= fp_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= fp_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= fp_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= fp_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= fp_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= fp_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= fp_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= fp_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= fp_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_fp}", "feb" => "#{feb_trend_fp}", "mar" => "#{mar_trend_fp}", "apr" => "#{apr_trend_fp}", "mag" => "#{may_trend_fp}", "giu" => "#{jun_trend_fp}", "lug" => "#{jul_trend_fp}", "ago" => "#{aug_trend_fp}", "set" => "#{sep_trend_fp}", "ott" => "#{oct_trend_fp}", "nov" => "#{nov_trend_fp}", "dic" => "#{dic_trend_fp}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_fp}", "feb" => "#{feb_trend_fp}", "mar" => "#{mar_trend_fp}", "apr" => "#{apr_trend_fp}", "mag" => "#{may_trend_fp}", "giu" => "#{jun_trend_fp}", "lug" => "#{jul_trend_fp}", "ago" => "#{aug_trend_fp}", "set" => "#{sep_trend_fp}", "ott" => "#{oct_trend_fp}", "nov" => "#{nov_trend_fp}", "dic" => "#{dic_trend_fp}"}, height: "120px",colors: ["#{fp_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_fp}", "feb" => "#{feb_progression_fp}", "mar" => "#{mar_progression_fp}", "apr" => "#{apr_progression_fp}", "mag" => "#{may_progression_fp}", "giu" => "#{jun_progression_fp}", "lug" => "#{jul_progression_fp}", "ago" => "#{aug_progression_fp}", "set" => "#{sep_progression_fp}", "ott" => "#{oct_progression_fp}", "nov" => "#{nov_progression_fp}", "dic" => "#{dic_progression_fp}"}, height: "120px",colors: ["#{fp_progression_resulting_color}"]) %>
   </div>
 </div>

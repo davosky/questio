@@ -5,6 +5,11 @@
       &emsp;
       FILT
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= filt_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= filt_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= filt_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= filt_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= filt_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= filt_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= filt_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= filt_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= filt_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= filt_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= filt_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_filt}", "feb" => "#{feb_trend_filt}", "mar" => "#{mar_trend_filt}", "apr" => "#{apr_trend_filt}", "mag" => "#{may_trend_filt}", "giu" => "#{jun_trend_filt}", "lug" => "#{jul_trend_filt}", "ago" => "#{aug_trend_filt}", "set" => "#{sep_trend_filt}", "ott" => "#{oct_trend_filt}", "nov" => "#{nov_trend_filt}", "dic" => "#{dic_trend_filt}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_filt}", "feb" => "#{feb_trend_filt}", "mar" => "#{mar_trend_filt}", "apr" => "#{apr_trend_filt}", "mag" => "#{may_trend_filt}", "giu" => "#{jun_trend_filt}", "lug" => "#{jul_trend_filt}", "ago" => "#{aug_trend_filt}", "set" => "#{sep_trend_filt}", "ott" => "#{oct_trend_filt}", "nov" => "#{nov_trend_filt}", "dic" => "#{dic_trend_filt}"}, height: "120px",colors: ["#{filt_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_filt}", "feb" => "#{feb_progression_filt}", "mar" => "#{mar_progression_filt}", "apr" => "#{apr_progression_filt}", "mag" => "#{may_progression_filt}", "giu" => "#{jun_progression_filt}", "lug" => "#{jul_progression_filt}", "ago" => "#{aug_progression_filt}", "set" => "#{sep_progression_filt}", "ott" => "#{oct_progression_filt}", "nov" => "#{nov_progression_filt}", "dic" => "#{dic_progression_filt}"}, height: "120px",colors: ["#{filt_progression_resulting_color}"]) %>
   </div>
 </div>

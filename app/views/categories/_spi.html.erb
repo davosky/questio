@@ -5,6 +5,11 @@
       &emsp;
       SPI
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= spi_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= spi_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= spi_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= spi_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= spi_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= spi_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= spi_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= spi_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= spi_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= spi_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= spi_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_spi}", "feb" => "#{feb_trend_spi}", "mar" => "#{mar_trend_spi}", "apr" => "#{apr_trend_spi}", "mag" => "#{may_trend_spi}", "giu" => "#{jun_trend_spi}", "lug" => "#{jul_trend_spi}", "ago" => "#{aug_trend_spi}", "set" => "#{sep_trend_spi}", "ott" => "#{oct_trend_spi}", "nov" => "#{nov_trend_spi}", "dic" => "#{dic_trend_spi}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_spi}", "feb" => "#{feb_trend_spi}", "mar" => "#{mar_trend_spi}", "apr" => "#{apr_trend_spi}", "mag" => "#{may_trend_spi}", "giu" => "#{jun_trend_spi}", "lug" => "#{jul_trend_spi}", "ago" => "#{aug_trend_spi}", "set" => "#{sep_trend_spi}", "ott" => "#{oct_trend_spi}", "nov" => "#{nov_trend_spi}", "dic" => "#{dic_trend_spi}"}, height: "120px",colors: ["#{spi_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_spi}", "feb" => "#{feb_progression_spi}", "mar" => "#{mar_progression_spi}", "apr" => "#{apr_progression_spi}", "mag" => "#{may_progression_spi}", "giu" => "#{jun_progression_spi}", "lug" => "#{jul_progression_spi}", "ago" => "#{aug_progression_spi}", "set" => "#{sep_progression_spi}", "ott" => "#{oct_progression_spi}", "nov" => "#{nov_progression_spi}", "dic" => "#{dic_progression_spi}"}, height: "120px",colors: ["#{spi_progression_resulting_color}"]) %>
   </div>
 </div>

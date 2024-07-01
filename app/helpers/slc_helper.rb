@@ -15,7 +15,7 @@ module SlcHelper
       jan_cur = JanCur.slc.pluck(:id).count
       result = jan_cur - jan_prev
       percentual = result.to_f / jan_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -36,7 +36,7 @@ module SlcHelper
       feb_cur = FebCur.slc.pluck(:id).count
       result = feb_cur - feb_prev
       percentual = result.to_f / feb_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -57,7 +57,7 @@ module SlcHelper
       mar_cur = MarCur.slc.pluck(:id).count
       result = mar_cur - mar_prev
       percentual = result.to_f / mar_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -78,7 +78,7 @@ module SlcHelper
       apr_cur = AprCur.slc.pluck(:id).count
       result = apr_cur - apr_prev
       percentual = result.to_f / apr_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -99,7 +99,7 @@ module SlcHelper
       may_cur = MayCur.slc.pluck(:id).count
       result = may_cur - may_prev
       percentual = result.to_f / may_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -120,7 +120,7 @@ module SlcHelper
       jun_cur = JunCur.slc.pluck(:id).count
       result = jun_cur - jun_prev
       percentual = result.to_f / jun_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -141,7 +141,7 @@ module SlcHelper
       jul_cur = JulCur.slc.pluck(:id).count
       result = jul_cur - jul_prev
       percentual = result.to_f / jul_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -162,7 +162,7 @@ module SlcHelper
       aug_cur = AugCur.slc.pluck(:id).count
       result = aug_cur - aug_prev
       percentual = result.to_f / aug_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -183,7 +183,7 @@ module SlcHelper
       sep_cur = SepCur.slc.pluck(:id).count
       result = sep_cur - sep_prev
       percentual = result.to_f / sep_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -204,7 +204,7 @@ module SlcHelper
       oct_cur = OctCur.slc.pluck(:id).count
       result = oct_cur - oct_prev
       percentual = result.to_f / oct_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -225,7 +225,7 @@ module SlcHelper
       nov_cur = NovCur.slc.pluck(:id).count
       result = nov_cur - nov_prev
       percentual = result.to_f / nov_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -246,7 +246,7 @@ module SlcHelper
       dic_cur = DicCur.slc.pluck(:id).count
       result = dic_cur - dic_prev
       percentual = result.to_f / dic_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -354,6 +354,344 @@ module SlcHelper
       dic_prev = DicPrev.slc.pluck(:id).count
       dic_cur = DicCur.slc.pluck(:id).count
       result = dic_cur - dic_prev
+    end
+  end
+
+  # PROGRESSION
+
+  def jan_progression_slc
+    if JanCur.slc.pluck(:id).count > 0
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = jan_cur
+    end
+  end
+
+  def feb_progression_slc
+    if FebCur.slc.pluck(:id).count > 0
+      feb_cur = FebCur.slc.pluck(:id).count
+      result = feb_cur
+    end
+  end
+
+  def mar_progression_slc
+    if MarCur.slc.pluck(:id).count > 0
+      mar_cur = MarCur.slc.pluck(:id).count
+      result = mar_cur
+    end
+  end
+
+  def apr_progression_slc
+    if AprCur.slc.pluck(:id).count > 0
+      apr_cur = AprCur.slc.pluck(:id).count
+      result = apr_cur
+    end
+  end
+
+  def may_progression_slc
+    if MayCur.slc.pluck(:id).count > 0
+      may_cur = MayCur.slc.pluck(:id).count
+      result = may_cur
+    end
+  end
+
+  def jun_progression_slc
+    if JunCur.slc.pluck(:id).count > 0
+      jun_cur = JunCur.slc.pluck(:id).count
+      result = jun_cur
+    end
+  end
+
+  def jul_progression_slc
+    if JulCur.slc.pluck(:id).count > 0
+      jul_cur = JulCur.slc.pluck(:id).count
+      result = jul_cur
+    end
+  end
+
+  def aug_progression_slc
+    if AugCur.slc.pluck(:id).count > 0
+      aug_cur = AugCur.slc.pluck(:id).count
+      result = aug_cur
+    end
+  end
+
+  def sep_progression_slc
+    if SepCur.slc.pluck(:id).count > 0
+      sep_cur = SepCur.slc.pluck(:id).count
+      result = sep_cur
+    end
+  end
+
+  def oct_progression_slc
+    if OctCur.slc.pluck(:id).count > 0
+      oct_cur = OctCur.slc.pluck(:id).count
+      result = oct_cur
+    end
+  end
+
+  def nov_progression_slc
+    if NovCur.slc.pluck(:id).count > 0
+      nov_cur = NovCur.slc.pluck(:id).count
+      result = nov_cur
+    end
+  end
+
+  def dic_progression_slc
+    if DicCur.slc.pluck(:id).count > 0
+      dic_cur = DicCur.slc.pluck(:id).count
+      result = dic_cur
+    end
+  end
+
+  def slc_progression_jan
+    if JanCur.slc.pluck(:id).count > 0
+      jan_cur = JanCur.slc.pluck(:id).count
+      jan_prev = JanPrev.slc.pluck(:id).count
+      result = jan_cur - jan_prev
+      percentual = result.to_f / jan_prev.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_feb
+    if FebCur.slc.pluck(:id).count > 0
+      feb_cur = FebCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = feb_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_mar
+    if MarCur.slc.pluck(:id).count > 0
+      mar_cur = MarCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = mar_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_apr
+    if AprCur.slc.pluck(:id).count > 0
+      apr_cur = AprCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = apr_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_may
+    if MayCur.slc.pluck(:id).count > 0
+      may_cur = MayCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = may_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_jun
+    if JunCur.slc.pluck(:id).count > 0
+      jun_cur = JunCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = jun_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_jul
+    if JulCur.slc.pluck(:id).count > 0
+      jul_cur = JulCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = jul_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_aug
+    if AugCur.slc.pluck(:id).count > 0
+      aug_cur = AugCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = aug_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_sep
+    if SepCur.slc.pluck(:id).count > 0
+      sep_cur = SepCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = sep_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_oct
+    if OctCur.slc.pluck(:id).count > 0
+      oct_cur = OctCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = oct_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_nov
+    if NovCur.slc.pluck(:id).count > 0
+      nov_cur = NovCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = nov_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def slc_progression_dic
+    if DicCur.slc.pluck(:id).count > 0
+      dic_cur = DicCur.slc.pluck(:id).count
+      jan_cur = JanCur.slc.pluck(:id).count
+      result = dic_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
     end
   end
 end

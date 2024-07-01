@@ -5,6 +5,11 @@
       &emsp;
       SLC
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= slc_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= slc_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= slc_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= slc_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= slc_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= slc_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= slc_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= slc_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= slc_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= slc_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= slc_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_slc}", "feb" => "#{feb_trend_slc}", "mar" => "#{mar_trend_slc}", "apr" => "#{apr_trend_slc}", "mag" => "#{may_trend_slc}", "giu" => "#{jun_trend_slc}", "lug" => "#{jul_trend_slc}", "ago" => "#{aug_trend_slc}", "set" => "#{sep_trend_slc}", "ott" => "#{oct_trend_slc}", "nov" => "#{nov_trend_slc}", "dic" => "#{dic_trend_slc}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_slc}", "feb" => "#{feb_trend_slc}", "mar" => "#{mar_trend_slc}", "apr" => "#{apr_trend_slc}", "mag" => "#{may_trend_slc}", "giu" => "#{jun_trend_slc}", "lug" => "#{jul_trend_slc}", "ago" => "#{aug_trend_slc}", "set" => "#{sep_trend_slc}", "ott" => "#{oct_trend_slc}", "nov" => "#{nov_trend_slc}", "dic" => "#{dic_trend_slc}"}, height: "120px",colors: ["#{slc_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_slc}", "feb" => "#{feb_progression_slc}", "mar" => "#{mar_progression_slc}", "apr" => "#{apr_progression_slc}", "mag" => "#{may_progression_slc}", "giu" => "#{jun_progression_slc}", "lug" => "#{jul_progression_slc}", "ago" => "#{aug_progression_slc}", "set" => "#{sep_progression_slc}", "ott" => "#{oct_progression_slc}", "nov" => "#{nov_progression_slc}", "dic" => "#{dic_progression_slc}"}, height: "120px",colors: ["#{slc_progression_resulting_color}"]) %>
   </div>
 </div>

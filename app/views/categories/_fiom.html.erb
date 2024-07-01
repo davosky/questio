@@ -5,6 +5,11 @@
       &emsp;
       FIOM
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= fiom_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= fiom_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= fiom_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= fiom_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= fiom_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= fiom_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= fiom_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= fiom_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= fiom_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= fiom_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= fiom_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_fiom}", "feb" => "#{feb_trend_fiom}", "mar" => "#{mar_trend_fiom}", "apr" => "#{apr_trend_fiom}", "mag" => "#{may_trend_fiom}", "giu" => "#{jun_trend_fiom}", "lug" => "#{jul_trend_fiom}", "ago" => "#{aug_trend_fiom}", "set" => "#{sep_trend_fiom}", "ott" => "#{oct_trend_fiom}", "nov" => "#{nov_trend_fiom}", "dic" => "#{dic_trend_fiom}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_fiom}", "feb" => "#{feb_trend_fiom}", "mar" => "#{mar_trend_fiom}", "apr" => "#{apr_trend_fiom}", "mag" => "#{may_trend_fiom}", "giu" => "#{jun_trend_fiom}", "lug" => "#{jul_trend_fiom}", "ago" => "#{aug_trend_fiom}", "set" => "#{sep_trend_fiom}", "ott" => "#{oct_trend_fiom}", "nov" => "#{nov_trend_fiom}", "dic" => "#{dic_trend_fiom}"}, height: "120px",colors: ["#{fiom_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_fiom}", "feb" => "#{feb_progression_fiom}", "mar" => "#{mar_progression_fiom}", "apr" => "#{apr_progression_fiom}", "mag" => "#{may_progression_fiom}", "giu" => "#{jun_progression_fiom}", "lug" => "#{jul_progression_fiom}", "ago" => "#{aug_progression_fiom}", "set" => "#{sep_progression_fiom}", "ott" => "#{oct_progression_fiom}", "nov" => "#{nov_progression_fiom}", "dic" => "#{dic_progression_fiom}"}, height: "120px",colors: ["#{fiom_progression_resulting_color}"]) %>
   </div>
 </div>

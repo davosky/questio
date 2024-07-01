@@ -5,6 +5,11 @@
       &emsp;
       FISAC
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= fisac_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= fisac_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= fisac_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= fisac_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= fisac_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= fisac_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= fisac_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= fisac_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= fisac_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= fisac_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= fisac_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_fisac}", "feb" => "#{feb_trend_fisac}", "mar" => "#{mar_trend_fisac}", "apr" => "#{apr_trend_fisac}", "mag" => "#{may_trend_fisac}", "giu" => "#{jun_trend_fisac}", "lug" => "#{jul_trend_fisac}", "ago" => "#{aug_trend_fisac}", "set" => "#{sep_trend_fisac}", "ott" => "#{oct_trend_fisac}", "nov" => "#{nov_trend_fisac}", "dic" => "#{dic_trend_fisac}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_fisac}", "feb" => "#{feb_trend_fisac}", "mar" => "#{mar_trend_fisac}", "apr" => "#{apr_trend_fisac}", "mag" => "#{may_trend_fisac}", "giu" => "#{jun_trend_fisac}", "lug" => "#{jul_trend_fisac}", "ago" => "#{aug_trend_fisac}", "set" => "#{sep_trend_fisac}", "ott" => "#{oct_trend_fisac}", "nov" => "#{nov_trend_fisac}", "dic" => "#{dic_trend_fisac}"}, height: "120px",colors: ["#{fisac_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_fisac}", "feb" => "#{feb_progression_fisac}", "mar" => "#{mar_progression_fisac}", "apr" => "#{apr_progression_fisac}", "mag" => "#{may_progression_fisac}", "giu" => "#{jun_progression_fisac}", "lug" => "#{jul_progression_fisac}", "ago" => "#{aug_progression_fisac}", "set" => "#{sep_progression_fisac}", "ott" => "#{oct_progression_fisac}", "nov" => "#{nov_progression_fisac}", "dic" => "#{dic_progression_fisac}"}, height: "120px",colors: ["#{fisac_progression_resulting_color}"]) %>
   </div>
 </div>

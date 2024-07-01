@@ -15,7 +15,7 @@ module FiomHelper
       jan_cur = JanCur.fiom.pluck(:id).count
       result = jan_cur - jan_prev
       percentual = result.to_f / jan_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -36,7 +36,7 @@ module FiomHelper
       feb_cur = FebCur.fiom.pluck(:id).count
       result = feb_cur - feb_prev
       percentual = result.to_f / feb_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -57,7 +57,7 @@ module FiomHelper
       mar_cur = MarCur.fiom.pluck(:id).count
       result = mar_cur - mar_prev
       percentual = result.to_f / mar_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -78,7 +78,7 @@ module FiomHelper
       apr_cur = AprCur.fiom.pluck(:id).count
       result = apr_cur - apr_prev
       percentual = result.to_f / apr_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -99,7 +99,7 @@ module FiomHelper
       may_cur = MayCur.fiom.pluck(:id).count
       result = may_cur - may_prev
       percentual = result.to_f / may_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -120,7 +120,7 @@ module FiomHelper
       jun_cur = JunCur.fiom.pluck(:id).count
       result = jun_cur - jun_prev
       percentual = result.to_f / jun_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -141,7 +141,7 @@ module FiomHelper
       jul_cur = JulCur.fiom.pluck(:id).count
       result = jul_cur - jul_prev
       percentual = result.to_f / jul_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -162,7 +162,7 @@ module FiomHelper
       aug_cur = AugCur.fiom.pluck(:id).count
       result = aug_cur - aug_prev
       percentual = result.to_f / aug_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -183,7 +183,7 @@ module FiomHelper
       sep_cur = SepCur.fiom.pluck(:id).count
       result = sep_cur - sep_prev
       percentual = result.to_f / sep_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -204,7 +204,7 @@ module FiomHelper
       oct_cur = OctCur.fiom.pluck(:id).count
       result = oct_cur - oct_prev
       percentual = result.to_f / oct_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -225,7 +225,7 @@ module FiomHelper
       nov_cur = NovCur.fiom.pluck(:id).count
       result = nov_cur - nov_prev
       percentual = result.to_f / nov_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -246,7 +246,7 @@ module FiomHelper
       dic_cur = DicCur.fiom.pluck(:id).count
       result = dic_cur - dic_prev
       percentual = result.to_f / dic_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -354,6 +354,344 @@ module FiomHelper
       dic_prev = DicPrev.fiom.pluck(:id).count
       dic_cur = DicCur.fiom.pluck(:id).count
       result = dic_cur - dic_prev
+    end
+  end
+
+  # PROGRESSION
+
+  def jan_progression_fiom
+    if JanCur.fiom.pluck(:id).count > 0
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = jan_cur
+    end
+  end
+
+  def feb_progression_fiom
+    if FebCur.fiom.pluck(:id).count > 0
+      feb_cur = FebCur.fiom.pluck(:id).count
+      result = feb_cur
+    end
+  end
+
+  def mar_progression_fiom
+    if MarCur.fiom.pluck(:id).count > 0
+      mar_cur = MarCur.fiom.pluck(:id).count
+      result = mar_cur
+    end
+  end
+
+  def apr_progression_fiom
+    if AprCur.fiom.pluck(:id).count > 0
+      apr_cur = AprCur.fiom.pluck(:id).count
+      result = apr_cur
+    end
+  end
+
+  def may_progression_fiom
+    if MayCur.fiom.pluck(:id).count > 0
+      may_cur = MayCur.fiom.pluck(:id).count
+      result = may_cur
+    end
+  end
+
+  def jun_progression_fiom
+    if JunCur.fiom.pluck(:id).count > 0
+      jun_cur = JunCur.fiom.pluck(:id).count
+      result = jun_cur
+    end
+  end
+
+  def jul_progression_fiom
+    if JulCur.fiom.pluck(:id).count > 0
+      jul_cur = JulCur.fiom.pluck(:id).count
+      result = jul_cur
+    end
+  end
+
+  def aug_progression_fiom
+    if AugCur.fiom.pluck(:id).count > 0
+      aug_cur = AugCur.fiom.pluck(:id).count
+      result = aug_cur
+    end
+  end
+
+  def sep_progression_fiom
+    if SepCur.fiom.pluck(:id).count > 0
+      sep_cur = SepCur.fiom.pluck(:id).count
+      result = sep_cur
+    end
+  end
+
+  def oct_progression_fiom
+    if OctCur.fiom.pluck(:id).count > 0
+      oct_cur = OctCur.fiom.pluck(:id).count
+      result = oct_cur
+    end
+  end
+
+  def nov_progression_fiom
+    if NovCur.fiom.pluck(:id).count > 0
+      nov_cur = NovCur.fiom.pluck(:id).count
+      result = nov_cur
+    end
+  end
+
+  def dic_progression_fiom
+    if DicCur.fiom.pluck(:id).count > 0
+      dic_cur = DicCur.fiom.pluck(:id).count
+      result = dic_cur
+    end
+  end
+
+  def fiom_progression_jan
+    if JanCur.fiom.pluck(:id).count > 0
+      jan_cur = JanCur.fiom.pluck(:id).count
+      jan_prev = JanPrev.fiom.pluck(:id).count
+      result = jan_cur - jan_prev
+      percentual = result.to_f / jan_prev.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_feb
+    if FebCur.fiom.pluck(:id).count > 0
+      feb_cur = FebCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = feb_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_mar
+    if MarCur.fiom.pluck(:id).count > 0
+      mar_cur = MarCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = mar_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_apr
+    if AprCur.fiom.pluck(:id).count > 0
+      apr_cur = AprCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = apr_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_may
+    if MayCur.fiom.pluck(:id).count > 0
+      may_cur = MayCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = may_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_jun
+    if JunCur.fiom.pluck(:id).count > 0
+      jun_cur = JunCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = jun_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_jul
+    if JulCur.fiom.pluck(:id).count > 0
+      jul_cur = JulCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = jul_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_aug
+    if AugCur.fiom.pluck(:id).count > 0
+      aug_cur = AugCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = aug_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_sep
+    if SepCur.fiom.pluck(:id).count > 0
+      sep_cur = SepCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = sep_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_oct
+    if OctCur.fiom.pluck(:id).count > 0
+      oct_cur = OctCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = oct_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_nov
+    if NovCur.fiom.pluck(:id).count > 0
+      nov_cur = NovCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = nov_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def fiom_progression_dic
+    if DicCur.fiom.pluck(:id).count > 0
+      dic_cur = DicCur.fiom.pluck(:id).count
+      jan_cur = JanCur.fiom.pluck(:id).count
+      result = dic_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
     end
   end
 end

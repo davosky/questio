@@ -15,7 +15,7 @@ module FilctemHelper
       jan_cur = JanCur.filctem.pluck(:id).count
       result = jan_cur - jan_prev
       percentual = result.to_f / jan_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -36,7 +36,7 @@ module FilctemHelper
       feb_cur = FebCur.filctem.pluck(:id).count
       result = feb_cur - feb_prev
       percentual = result.to_f / feb_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -57,7 +57,7 @@ module FilctemHelper
       mar_cur = MarCur.filctem.pluck(:id).count
       result = mar_cur - mar_prev
       percentual = result.to_f / mar_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -78,7 +78,7 @@ module FilctemHelper
       apr_cur = AprCur.filctem.pluck(:id).count
       result = apr_cur - apr_prev
       percentual = result.to_f / apr_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -99,7 +99,7 @@ module FilctemHelper
       may_cur = MayCur.filctem.pluck(:id).count
       result = may_cur - may_prev
       percentual = result.to_f / may_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -120,7 +120,7 @@ module FilctemHelper
       jun_cur = JunCur.filctem.pluck(:id).count
       result = jun_cur - jun_prev
       percentual = result.to_f / jun_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -141,7 +141,7 @@ module FilctemHelper
       jul_cur = JulCur.filctem.pluck(:id).count
       result = jul_cur - jul_prev
       percentual = result.to_f / jul_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -162,7 +162,7 @@ module FilctemHelper
       aug_cur = AugCur.filctem.pluck(:id).count
       result = aug_cur - aug_prev
       percentual = result.to_f / aug_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -183,7 +183,7 @@ module FilctemHelper
       sep_cur = SepCur.filctem.pluck(:id).count
       result = sep_cur - sep_prev
       percentual = result.to_f / sep_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -204,7 +204,7 @@ module FilctemHelper
       oct_cur = OctCur.filctem.pluck(:id).count
       result = oct_cur - oct_prev
       percentual = result.to_f / oct_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -225,7 +225,7 @@ module FilctemHelper
       nov_cur = NovCur.filctem.pluck(:id).count
       result = nov_cur - nov_prev
       percentual = result.to_f / nov_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -246,7 +246,7 @@ module FilctemHelper
       dic_cur = DicCur.filctem.pluck(:id).count
       result = dic_cur - dic_prev
       percentual = result.to_f / dic_prev.to_f * 100
-      percentual = percentual.round(2)
+      percentual = percentual.round(1)
       if result > 0
         "<span class='text-success fw-bold'>#{result}</span>
         <br/>
@@ -354,6 +354,430 @@ module FilctemHelper
       dic_prev = DicPrev.filctem.pluck(:id).count
       dic_cur = DicCur.filctem.pluck(:id).count
       result = dic_cur - dic_prev
+    end
+  end
+
+  # PROGRESSION
+
+  def jan_progression_filctem
+    if JanCur.filctem.pluck(:id).count > 0
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = jan_cur
+    end
+  end
+
+  def feb_progression_filctem
+    if FebCur.filctem.pluck(:id).count > 0
+      feb_cur = FebCur.filctem.pluck(:id).count
+      result = feb_cur
+    end
+  end
+
+  def mar_progression_filctem
+    if MarCur.filctem.pluck(:id).count > 0
+      mar_cur = MarCur.filctem.pluck(:id).count
+      result = mar_cur
+    end
+  end
+
+  def apr_progression_filctem
+    if AprCur.filctem.pluck(:id).count > 0
+      apr_cur = AprCur.filctem.pluck(:id).count
+      result = apr_cur
+    end
+  end
+
+  def may_progression_filctem
+    if MayCur.filctem.pluck(:id).count > 0
+      may_cur = MayCur.filctem.pluck(:id).count
+      result = may_cur
+    end
+  end
+
+  def jun_progression_filctem
+    if JunCur.filctem.pluck(:id).count > 0
+      jun_cur = JunCur.filctem.pluck(:id).count
+      result = jun_cur
+    end
+  end
+
+  def jul_progression_filctem
+    if JulCur.filctem.pluck(:id).count > 0
+      jul_cur = JulCur.filctem.pluck(:id).count
+      result = jul_cur
+    end
+  end
+
+  def aug_progression_filctem
+    if AugCur.filctem.pluck(:id).count > 0
+      aug_cur = AugCur.filctem.pluck(:id).count
+      result = aug_cur
+    end
+  end
+
+  def sep_progression_filctem
+    if SepCur.filctem.pluck(:id).count > 0
+      sep_cur = SepCur.filctem.pluck(:id).count
+      result = sep_cur
+    end
+  end
+
+  def oct_progression_filctem
+    if OctCur.filctem.pluck(:id).count > 0
+      oct_cur = OctCur.filctem.pluck(:id).count
+      result = oct_cur
+    end
+  end
+
+  def nov_progression_filctem
+    if NovCur.filctem.pluck(:id).count > 0
+      nov_cur = NovCur.filctem.pluck(:id).count
+      result = nov_cur
+    end
+  end
+
+  def dic_progression_filctem
+    if DicCur.filctem.pluck(:id).count > 0
+      dic_cur = DicCur.filctem.pluck(:id).count
+      result = dic_cur
+    end
+  end
+
+  # PROGRESSION
+
+  def jan_progression_filctem
+    if JanCur.filctem.pluck(:id).count > 0
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = jan_cur
+    end
+  end
+
+  def feb_progression_filctem
+    if FebCur.filctem.pluck(:id).count > 0
+      feb_cur = FebCur.filctem.pluck(:id).count
+      result = feb_cur
+    end
+  end
+
+  def mar_progression_filctem
+    if MarCur.filctem.pluck(:id).count > 0
+      mar_cur = MarCur.filctem.pluck(:id).count
+      result = mar_cur
+    end
+  end
+
+  def apr_progression_filctem
+    if AprCur.filctem.pluck(:id).count > 0
+      apr_cur = AprCur.filctem.pluck(:id).count
+      result = apr_cur
+    end
+  end
+
+  def may_progression_filctem
+    if MayCur.filctem.pluck(:id).count > 0
+      may_cur = MayCur.filctem.pluck(:id).count
+      result = may_cur
+    end
+  end
+
+  def jun_progression_filctem
+    if JunCur.filctem.pluck(:id).count > 0
+      jun_cur = JunCur.filctem.pluck(:id).count
+      result = jun_cur
+    end
+  end
+
+  def jul_progression_filctem
+    if JulCur.filctem.pluck(:id).count > 0
+      jul_cur = JulCur.filctem.pluck(:id).count
+      result = jul_cur
+    end
+  end
+
+  def aug_progression_filctem
+    if AugCur.filctem.pluck(:id).count > 0
+      aug_cur = AugCur.filctem.pluck(:id).count
+      result = aug_cur
+    end
+  end
+
+  def sep_progression_filctem
+    if SepCur.filctem.pluck(:id).count > 0
+      sep_cur = SepCur.filctem.pluck(:id).count
+      result = sep_cur
+    end
+  end
+
+  def oct_progression_filctem
+    if OctCur.filctem.pluck(:id).count > 0
+      oct_cur = OctCur.filctem.pluck(:id).count
+      result = oct_cur
+    end
+  end
+
+  def nov_progression_filctem
+    if NovCur.filctem.pluck(:id).count > 0
+      nov_cur = NovCur.filctem.pluck(:id).count
+      result = nov_cur
+    end
+  end
+
+  def dic_progression_filctem
+    if DicCur.filctem.pluck(:id).count > 0
+      dic_cur = DicCur.filctem.pluck(:id).count
+      result = dic_cur
+    end
+  end
+
+  def filctem_progression_jan
+    if JanCur.filctem.pluck(:id).count > 0
+      jan_cur = JanCur.filctem.pluck(:id).count
+      jan_prev = JanPrev.filctem.pluck(:id).count
+      result = jan_cur - jan_prev
+      percentual = result.to_f / jan_prev.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_feb
+    if FebCur.filctem.pluck(:id).count > 0
+      feb_cur = FebCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = feb_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_mar
+    if MarCur.filctem.pluck(:id).count > 0
+      mar_cur = MarCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = mar_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_apr
+    if AprCur.filctem.pluck(:id).count > 0
+      apr_cur = AprCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = apr_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_may
+    if MayCur.filctem.pluck(:id).count > 0
+      may_cur = MayCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = may_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_jun
+    if JunCur.filctem.pluck(:id).count > 0
+      jun_cur = JunCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = jun_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_jul
+    if JulCur.filctem.pluck(:id).count > 0
+      jul_cur = JulCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = jul_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_aug
+    if AugCur.filctem.pluck(:id).count > 0
+      aug_cur = AugCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = aug_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_sep
+    if SepCur.filctem.pluck(:id).count > 0
+      sep_cur = SepCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = sep_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_oct
+    if OctCur.filctem.pluck(:id).count > 0
+      oct_cur = OctCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = oct_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_nov
+    if NovCur.filctem.pluck(:id).count > 0
+      nov_cur = NovCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = nov_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
+    end
+  end
+
+  def filctem_progression_dic
+    if DicCur.filctem.pluck(:id).count > 0
+      dic_cur = DicCur.filctem.pluck(:id).count
+      jan_cur = JanCur.filctem.pluck(:id).count
+      result = dic_cur - jan_cur
+      percentual = result.to_f / jan_cur.to_f * 100
+      percentual = percentual.round(1)
+      if result > 0
+        "<span class='text-success fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-success fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      else
+        "<span class='text-danger fw-bold'>#{result}&nbsp;</span>
+      <br/>
+      <span class='text-danger fw-bold'>#{percentual}&nbsp;%&nbsp;</span>
+      ".html_safe
+      end
     end
   end
 end

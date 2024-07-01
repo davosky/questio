@@ -5,6 +5,11 @@
       &emsp;
       FILCTEM
     </p>
+    <small>
+      <i class="fw-bold text-secondary">
+        Comparazione
+      </i>
+    </small>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item">
         <small>
@@ -84,8 +89,95 @@
         </small>
       </li>
     </ul>
+    <small>
+      <i class="fw-bold text-secondary">
+        Progressione
+      </i>
+    </small>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <small>
+          GEN
+          <br/>
+          <%= filctem_progression_jan %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          FEB
+          <br/>
+          <%= filctem_progression_feb %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAR
+          <br/>
+          <%= filctem_progression_mar %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          APR
+          <br/>
+          <%= filctem_progression_apr %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          MAG
+          <br/>
+          <%= filctem_progression_may %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          GIU
+          <br/>
+          <%= filctem_progression_jun %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          LUG
+          <br/>
+          <%= filctem_progression_jul %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          SET
+          <br/>
+          <%= filctem_progression_sep %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          OTT
+          <br/>
+          <%= filctem_progression_oct %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          NOV
+          <br/>
+          <%= filctem_progression_nov %>
+        </small>
+      </li>
+      <li class="list-group-item">
+        <small>
+          DIC
+          <br/>
+          <%= filctem_progression_dic %>
+        </small>
+      </li>
+    </ul>
   </div>
   <div class="col-4">
-    <%= line_chart({"gen" => "#{jan_trend_filctem}", "feb" => "#{feb_trend_filctem}", "mar" => "#{mar_trend_filctem}", "apr" => "#{apr_trend_filctem}", "mag" => "#{may_trend_filctem}", "giu" => "#{jun_trend_filctem}", "lug" => "#{jul_trend_filctem}", "ago" => "#{aug_trend_filctem}", "set" => "#{sep_trend_filctem}", "ott" => "#{oct_trend_filctem}", "nov" => "#{nov_trend_filctem}", "dic" => "#{dic_trend_filctem}"}, height: "120px",colors: ["#e83e8c"]) %>
+    <br>
+    &emsp;
+    <%= line_chart({"gen" => "#{jan_trend_filctem}", "feb" => "#{feb_trend_filctem}", "mar" => "#{mar_trend_filctem}", "apr" => "#{apr_trend_filctem}", "mag" => "#{may_trend_filctem}", "giu" => "#{jun_trend_filctem}", "lug" => "#{jul_trend_filctem}", "ago" => "#{aug_trend_filctem}", "set" => "#{sep_trend_filctem}", "ott" => "#{oct_trend_filctem}", "nov" => "#{nov_trend_filctem}", "dic" => "#{dic_trend_filctem}"}, height: "120px",colors: ["#{filctem_trend_resulting_color}"]) %>
+    <%= line_chart({"gen" => "#{jan_progression_filctem}", "feb" => "#{feb_progression_filctem}", "mar" => "#{mar_progression_filctem}", "apr" => "#{apr_progression_filctem}", "mag" => "#{may_progression_filctem}", "giu" => "#{jun_progression_filctem}", "lug" => "#{jul_progression_filctem}", "ago" => "#{aug_progression_filctem}", "set" => "#{sep_progression_filctem}", "ott" => "#{oct_progression_filctem}", "nov" => "#{nov_progression_filctem}", "dic" => "#{dic_progression_filctem}"}, height: "120px",colors: ["#{filctem_progression_resulting_color}"]) %>
   </div>
 </div>
